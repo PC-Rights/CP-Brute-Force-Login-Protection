@@ -13,7 +13,7 @@ require_once 'includes/htaccess.php';
  * Author: PC Rights
  * Author URI: https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/
  * Version (Base): 1.5.3
- * Version: 2.0.0
+ * Version: 2.0.1
  * License: GPL2
  * 
  * Copyright 2014  Fresh-Media
@@ -56,7 +56,6 @@ class CPBruteForceLoginProtection {
         //Init hooks
         add_action('plugins_loaded', array($this, 'init'));
         add_action('admin_init', array($this, 'adminInit'));
-        add_action('admin_menu', array($this, 'menuInit'));
         add_action('admin_menu', array($this, 'securitymenuInit'));        
 
         //Login hooks
@@ -99,17 +98,7 @@ class CPBruteForceLoginProtection {
 	* 
 	* @return void
 	*/
-	public function menuInit() {
-	//Add settings page to the Settings menu
-        add_options_page(
-		__('CP Brute Force Login Protection Settings',
-		'cp-brute-force-login-protection'),
-		'CP Brute Force Login Protection',
-		'manage_options',
-		'cp-brute-force-login-protection',
-		array($this, 'showSettingsPage'));
-	}
-    
+ 
 	/**
 	* Called after the basic admin panel menu structure is in place.
 	* Adds a menu to the ClassicPress Security page.
@@ -118,13 +107,11 @@ class CPBruteForceLoginProtection {
 	*/
 	public function securitymenuInit() {
 	// Add settings page to the Security menu
-	if ( function_exists('\add_security_page')) {
 	add_security_page(
 		__('CP Brute Force Login Protection Settings', 'cp-brute-force-login-protection'), // Page title
 		__('CP Brute Force Login Protection Settings', 'cp-brute-force-login-protection'), // Menu title
 		dirname(plugin_basename(__FILE__)), // Menu slug
 		array($this, 'showSettingsPage')); // Content callback
-		}
 	}
 
     /**
