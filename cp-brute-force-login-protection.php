@@ -56,6 +56,7 @@ class CPBruteForceLoginProtection {
         //Init hooks
         add_action('plugins_loaded', array($this, 'init'));
         add_action('admin_init', array($this, 'adminInit'));
+        add_action('admin_menu', array($this, 'menuInit'))
         add_action('admin_menu', array($this, 'securitymenuInit'));        
 
         //Login hooks
@@ -101,17 +102,29 @@ class CPBruteForceLoginProtection {
  
 	/**
 	* Called after the basic admin panel menu structure is in place.
-	* Adds a menu to the ClassicPress Security page.
+	* Adds a menu to the ClassicPress Security page if it exists.
+	* Otherwise adds it to the Settings tab.
 	*
 	* @return void
 	*/
 	public function securitymenuInit() {
-	// Add settings page to the Security menu
+	// Add menu to the Security page
+	if ( function_exists('\add_security_page')) {
 	add_security_page(
 		__('CP Brute Force Login Protection Settings', 'cp-brute-force-login-protection'), // Page title
 		__('CP Brute Force Login Protection Settings', 'cp-brute-force-login-protection'), // Menu title
 		dirname(plugin_basename(__FILE__)), // Menu slug
 		array($this, 'showSettingsPage')); // Content callback
+		} else {
+	//Add menu to the Settings tab
+        add_options_page(
+		__('CP Brute Force Login Protection Settings',
+		'cp-brute-force-login-protection'),
+		'CP Brute Force Login Protection',
+		'manage_options',
+		'cp-brute-force-login-protection',
+		array($this, 'showSettingsPage'));
+	   }
 	}
 
     /**
