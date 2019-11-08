@@ -42,7 +42,7 @@ If you'd like to make a contribution to the CP-Brute Force Login Protection plug
 ## Changelog
 
 ### 2.0.1
-* Remove from Settings tab and assume Security page exists
+* Remove from Settings tab for ClassicPress v1.1.0 and above
 
 ### 2.0.0
 * Fork from 1.5.3 and add code for ClassicPress Security Page
