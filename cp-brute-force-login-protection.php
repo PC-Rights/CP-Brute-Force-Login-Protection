@@ -57,7 +57,6 @@ class CPBruteForceLoginProtection {
         add_action('plugins_loaded', array($this, 'init'));
         add_action('admin_init', array($this, 'adminInit'));
         add_action('admin_menu', array($this, 'menuInit'))
-        add_action('admin_menu', array($this, 'securitymenuInit'));        
 
         //Login hooks
         add_action('wp_login_failed', array($this, 'loginFailed'));
@@ -107,7 +106,7 @@ class CPBruteForceLoginProtection {
 	*
 	* @return void
 	*/
-	public function securitymenuInit() {
+	public function menuInit() {
 	// Add menu to the Security page
 	if ( function_exists('\add_security_page')) {
 	add_security_page(
