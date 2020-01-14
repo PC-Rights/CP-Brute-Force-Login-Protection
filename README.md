@@ -20,6 +20,7 @@ After a specified limit of login attempts within a specified time, the IP addres
 * Option to inform user about remaining attempts on login page
 * Option to email administrator when an IP has been blocked
 * Custom message to show to blocked users
+* Updates will appear in your Admin Panel as a regular plugin update
 
 ## Installation
 1. Download the plugin zip file from https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/releases/latest
@@ -40,6 +41,9 @@ CP Brute Force Login Protection will only work if your .htaccess file is writeab
 If you'd like to make a contribution to the CP-Brute Force Login Protection plugin, you can submit a pull request to our [GitHub Repository](https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/).
 
 ## Changelog
+
+### 2.0.2
+* Restructure folders and add code for CP Update Manager
 
 ### 2.0.1
 * Remove from Settings tab for ClassicPress v1.1.0 and above
