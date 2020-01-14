@@ -2,8 +2,8 @@
 Contributors: Jan-Paul Kleemans, xxsimoxx, PC-Rights
 Tags: brute force, bruteforce, login, wp-login, protection, shield, security, htaccess, block, ip
 Requires at least: 1.1.0
-Tested up to: 1.1.1
-Stable tag: 2.0.1
+Tested up to: 1.1.2
+Stable tag: 2.0.2
 License: GPL2
 
 Protects your website against brute force login attacks using .htaccess
@@ -24,6 +24,7 @@ After a specified limit of login attempts within a specified time, the IP addres
 * Option to inform user about remaining attempts on login page
 * Option to email administrator when an IP has been blocked
 * Custom message to show to blocked users
+* Updates will appear in your Admin Panel as a regular plugin update
 
 == Installation ==
 1. Download the plugin zip file from https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/releases/latest
@@ -41,6 +42,9 @@ If you don't have FTP access, the only way to unblock your IP is to log in your 
 CP Brute Force Login Protection will only work if your .htaccess file is writeable by ClassicPress. If you get this error, make sure that your .htaccess file has read and write permissions.
 
 == Changelog ==
+
+= 2.0.2 =
+* Restructure folders and add code for CP Update Manager
 
 = 2.0.1 =
 * Remove from Settings tab for ClassicPress v1.1.0 and above

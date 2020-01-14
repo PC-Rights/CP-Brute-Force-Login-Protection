@@ -2,6 +2,7 @@
 
 require_once ABSPATH . '/wp-admin/includes/file.php';
 require_once 'includes/htaccess.php';
+require_once('classes/UpdateClient.class.php');
 
 /**
  * Plugin Name: CP Brute Force Login Protection
@@ -13,7 +14,7 @@ require_once 'includes/htaccess.php';
  * Author: PC Rights
  * Author URI: https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/
  * Version (Base): 1.5.3
- * Version: 2.0.1
+ * Version: 2.0.2
  * License: GPL2
  * 
  * Copyright 2014  Fresh-Media
