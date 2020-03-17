@@ -3,7 +3,7 @@ Contributors: Jan-Paul Kleemans, xxsimoxx, PC-Rights
 Tags: brute force, bruteforce, login, wp-login, protection, shield, security, htaccess, block, ip
 Requires at least: 1.1.0
 Tested up to: 1.1.2
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPL2
 
 Protects your website against brute force login attacks using .htaccess
@@ -42,6 +42,9 @@ If you don't have FTP access, the only way to unblock your IP is to log in your 
 CP Brute Force Login Protection will only work if your .htaccess file is writeable by ClassicPress. If you get this error, make sure that your .htaccess file has read and write permissions.
 
 == Changelog ==
+
+= 2.0.3 =
+* Minor changes to service Update Manager 2.0.0
 
 = 2.0.2 =
 * Restructure folders and add code for CP Update Manager
