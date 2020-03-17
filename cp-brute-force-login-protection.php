@@ -14,7 +14,7 @@ require_once('classes/UpdateClient.class.php');
  * Author: PC Rights
  * Author URI: https://github.com/PC-Rights/CP-Brute-Force-Login-Protection/
  * Version (Base): 1.5.3
- * Version: 2.0.2
+ * Version: 2.0.3
  * License: GPL2
  * 
  * Copyright 2014  Fresh-Media
