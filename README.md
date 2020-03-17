@@ -42,6 +42,9 @@ If you'd like to make a contribution to the CP-Brute Force Login Protection plug
 
 ## Changelog
 
+### 2.0.3
+* Minor changes to service Update Manager 2.0.0
+
 ### 2.0.2
 * Restructure folders and add code for CP Update Manager
 
